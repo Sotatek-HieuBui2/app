@@ -1,0 +1,642 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.smartcleaner"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- Storage permissions -->
+12    <uses-permission
+12-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:6:5-7:38
+13        android:name="android.permission.READ_EXTERNAL_STORAGE"
+13-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:6:22-77
+14        android:maxSdkVersion="32" />
+14-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:7:9-35
+15    <uses-permission
+15-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:8:5-10:40
+16        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+16-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:8:22-78
+17        android:maxSdkVersion="29" />
+17-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:9:9-35
+18    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+18-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:11:5-12:40
+18-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:11:22-79
+19
+20    <!-- Package usage stats -->
+21    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+21-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:15:5-16:47
+21-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:15:22-75
+22
+23    <!-- Query all packages (Android 11+) -->
+24    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+24-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:19:5-20:53
+24-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:19:22-74
+25
+26    <!-- Delete packages -->
+27    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+27-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:23:5-82
+27-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:23:22-79
+28
+29    <!-- Media location (for image metadata) -->
+30    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+30-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:26:5-80
+30-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:26:22-77
+31
+32    <!-- Internet for cloud backup -->
+33    <uses-permission android:name="android.permission.INTERNET" />
+33-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:29:5-67
+33-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:29:22-64
+34    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+34-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:30:5-79
+34-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:30:22-76
+35
+36    <!-- Boot receiver for scheduled tasks -->
+37    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+37-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:33:5-81
+37-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:33:22-78
+38
+39    <!-- Foreground service -->
+40    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+40-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:36:5-77
+40-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:36:22-74
+41    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+41-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:37:5-87
+41-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:37:22-84
+42
+43    <!-- Notifications -->
+44    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+44-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:40:5-77
+44-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:40:22-74
+45
+46    <!-- Wake lock for background work -->
+47    <uses-permission android:name="android.permission.WAKE_LOCK" />
+47-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:43:5-68
+47-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:43:22-65
+48
+49    <permission
+49-->[androidx.core:core:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-3\84d58b6b0f036c7d3bce0158531cd113\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+50        android:name="com.smartcleaner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+50-->[androidx.core:core:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-3\84d58b6b0f036c7d3bce0158531cd113\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+51        android:protectionLevel="signature" />
+51-->[androidx.core:core:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-3\84d58b6b0f036c7d3bce0158531cd113\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+52
+53    <uses-permission android:name="com.smartcleaner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+53-->[androidx.core:core:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-3\84d58b6b0f036c7d3bce0158531cd113\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+53-->[androidx.core:core:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-3\84d58b6b0f036c7d3bce0158531cd113\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+54
+55    <application
+55-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:45:5-106:19
+56        android:name="com.smartcleaner.SmartCleanerApplication"
+56-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:46:9-48
+57        android:allowBackup="true"
+57-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:47:9-35
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.12.0] C:\Users\Lenovo\.gradle\caches\transforms-3\84d58b6b0f036c7d3bce0158531cd113\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+59        android:dataExtractionRules="@xml/data_extraction_rules"
+59-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:48:9-65
+60        android:debuggable="true"
+61        android:extractNativeLibs="false"
+62        android:fullBackupContent="@xml/backup_rules"
+62-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:49:9-54
+63        android:icon="@drawable/ic_launcher"
+63-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:50:9-45
+64        android:label="@string/app_name"
+64-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:51:9-41
+65        android:requestLegacyExternalStorage="true"
+65-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:55:9-52
+66        android:roundIcon="@drawable/ic_launcher"
+66-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:52:9-50
+67        android:supportsRtl="true"
+67-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:53:9-35
+68        android:theme="@style/Theme.SmartCleaner" >
+68-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:54:9-50
+69
+70        <!-- Main Activity -->
+71        <activity
+71-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:59:9-68:20
+72            android:name="com.smartcleaner.presentation.MainActivity"
+72-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:60:13-54
+73            android:exported="true"
+73-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:61:13-36
+74            android:theme="@style/Theme.SmartCleaner"
+74-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:62:13-54
+75            android:windowSoftInputMode="adjustResize" >
+75-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:63:13-55
+76            <intent-filter>
+76-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:64:13-67:29
+77                <action android:name="android.intent.action.MAIN" />
+77-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:65:17-69
+77-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:65:25-66
+78
+79                <category android:name="android.intent.category.LAUNCHER" />
+79-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:66:17-77
+79-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:66:27-74
+80            </intent-filter>
+81        </activity>
+82
+83        <!-- Package removed receiver -->
+84        <receiver
+84-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:71:9-78:20
+85            android:name="com.smartcleaner.core.receiver.PackageRemovedReceiver"
+85-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:72:13-65
+86            android:exported="true" >
+86-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:73:13-36
+87            <intent-filter>
+87-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:74:13-77:29
+88                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+88-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:75:17-80
+88-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:75:25-77
+89
+90                <data android:scheme="package" />
+90-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:76:17-50
+90-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:76:23-47
+91            </intent-filter>
+92        </receiver>
+93
+94        <!-- Boot completed receiver -->
+95        <receiver
+95-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:81:9-87:20
+96            android:name="com.smartcleaner.core.receiver.BootCompletedReceiver"
+96-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:82:13-64
+97            android:exported="true" >
+97-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:83:13-36
+98            <intent-filter>
+98-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:84:13-86:29
+99                <action android:name="android.intent.action.BOOT_COMPLETED" />
+99-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:85:17-79
+99-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:85:25-76
+100            </intent-filter>
+101        </receiver>
+102
+103        <!-- Cleaning service -->
+104        <service
+104-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:90:9-93:56
+105            android:name="com.smartcleaner.core.service.CleaningService"
+105-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:91:13-57
+106            android:exported="false"
+106-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:92:13-37
+107            android:foregroundServiceType="dataSync" />
+107-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:93:13-53
+108
+109        <!-- WorkManager initialization -->
+110        <provider
+111            android:name="androidx.startup.InitializationProvider"
+111-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:97:13-67
+112            android:authorities="com.smartcleaner.androidx-startup"
+112-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:98:13-68
+113            android:exported="false" >
+113-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:99:13-37
+114            <meta-data
+114-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:101:13-103:52
+115                android:name="androidx.work.WorkManagerInitializer"
+115-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:102:17-68
+116                android:value="androidx.startup" />
+116-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:103:17-49
+117            <meta-data
+117-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0a7a589db8eb09b7e7289fec92c8854c\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+118                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+118-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0a7a589db8eb09b7e7289fec92c8854c\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+119                android:value="androidx.startup" />
+119-->[androidx.emoji2:emoji2:1.4.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0a7a589db8eb09b7e7289fec92c8854c\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+120            <meta-data
+120-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\.gradle\caches\transforms-3\8e2cd7d5c2da1a71af76fde503c95b38\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+121                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+121-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\.gradle\caches\transforms-3\8e2cd7d5c2da1a71af76fde503c95b38\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+122                android:value="androidx.startup" />
+122-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\.gradle\caches\transforms-3\8e2cd7d5c2da1a71af76fde503c95b38\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+123            <meta-data
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+124                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+125                android:value="androidx.startup" />
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+126        </provider>
+127
+128        <service
+128-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:39:9-45:35
+129            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+129-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:40:13-88
+130            android:directBootAware="false"
+130-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:41:13-44
+131            android:enabled="@bool/enable_system_alarm_service_default"
+131-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:42:13-72
+132            android:exported="false" />
+132-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:43:13-37
+133        <service
+133-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:46:9-52:35
+134            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+134-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:47:13-84
+135            android:directBootAware="false"
+135-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:48:13-44
+136            android:enabled="@bool/enable_system_job_service_default"
+136-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:49:13-70
+137            android:exported="true"
+137-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:50:13-36
+138            android:permission="android.permission.BIND_JOB_SERVICE" />
+138-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:51:13-69
+139        <service
+139-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:53:9-59:35
+140            android:name="androidx.work.impl.foreground.SystemForegroundService"
+140-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:54:13-81
+141            android:directBootAware="false"
+141-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:55:13-44
+142            android:enabled="@bool/enable_system_foreground_service_default"
+142-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:56:13-77
+143            android:exported="false" />
+143-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:57:13-37
+144
+145        <receiver
+145-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:61:9-66:35
+146            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+146-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:62:13-88
+147            android:directBootAware="false"
+147-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:63:13-44
+148            android:enabled="true"
+148-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:64:13-35
+149            android:exported="false" />
+149-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:65:13-37
+150        <receiver
+150-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:67:9-77:20
+151            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+151-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:68:13-106
+152            android:directBootAware="false"
+152-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:69:13-44
+153            android:enabled="false"
+153-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:70:13-36
+154            android:exported="false" >
+154-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:71:13-37
+155            <intent-filter>
+155-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:73:13-76:29
+156                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+156-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:74:17-87
+156-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:74:25-84
+157                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+157-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:75:17-90
+157-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:75:25-87
+158            </intent-filter>
+159        </receiver>
+160        <receiver
+160-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:78:9-88:20
+161            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+161-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:79:13-104
+162            android:directBootAware="false"
+162-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:80:13-44
+163            android:enabled="false"
+163-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:81:13-36
+164            android:exported="false" >
+164-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:82:13-37
+165            <intent-filter>
+165-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:84:13-87:29
+166                <action android:name="android.intent.action.BATTERY_OKAY" />
+166-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:85:17-77
+166-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:85:25-74
+167                <action android:name="android.intent.action.BATTERY_LOW" />
+167-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:86:17-76
+167-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:86:25-73
+168            </intent-filter>
+169        </receiver>
+170        <receiver
+170-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:89:9-99:20
+171            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+171-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:90:13-104
+172            android:directBootAware="false"
+172-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:91:13-44
+173            android:enabled="false"
+173-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:92:13-36
+174            android:exported="false" >
+174-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:93:13-37
+175            <intent-filter>
+175-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:95:13-98:29
+176                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+176-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:96:17-83
+176-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:96:25-80
+177                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+177-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:97:17-82
+177-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:97:25-79
+178            </intent-filter>
+179        </receiver>
+180        <receiver
+180-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:100:9-109:20
+181            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+181-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:101:13-103
+182            android:directBootAware="false"
+182-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:102:13-44
+183            android:enabled="false"
+183-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:103:13-36
+184            android:exported="false" >
+184-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:104:13-37
+185            <intent-filter>
+185-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:106:13-108:29
+186                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+186-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:107:17-79
+186-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:107:25-76
+187            </intent-filter>
+188        </receiver>
+189        <receiver
+189-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:110:9-121:20
+190            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+190-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:111:13-88
+191            android:directBootAware="false"
+191-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:112:13-44
+192            android:enabled="false"
+192-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:113:13-36
+193            android:exported="false" >
+193-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:114:13-37
+194            <intent-filter>
+194-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:116:13-120:29
+195                <action android:name="android.intent.action.BOOT_COMPLETED" />
+195-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:85:17-79
+195-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:85:25-76
+196                <action android:name="android.intent.action.TIME_SET" />
+196-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:118:17-73
+196-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:118:25-70
+197                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+197-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:119:17-81
+197-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:119:25-78
+198            </intent-filter>
+199        </receiver>
+200        <receiver
+200-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:122:9-131:20
+201            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+201-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:123:13-99
+202            android:directBootAware="false"
+202-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:124:13-44
+203            android:enabled="@bool/enable_system_alarm_service_default"
+203-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:125:13-72
+204            android:exported="false" >
+204-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:126:13-37
+205            <intent-filter>
+205-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:128:13-130:29
+206                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+206-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:129:17-98
+206-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:129:25-95
+207            </intent-filter>
+208        </receiver>
+209        <receiver
+209-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:132:9-142:20
+210            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+210-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:133:13-78
+211            android:directBootAware="false"
+211-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:134:13-44
+212            android:enabled="true"
+212-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:135:13-35
+213            android:exported="true"
+213-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:136:13-36
+214            android:permission="android.permission.DUMP" >
+214-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:137:13-57
+215            <intent-filter>
+215-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:139:13-141:29
+216                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+216-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:140:17-88
+216-->[androidx.work:work-runtime:2.9.0] C:\Users\Lenovo\.gradle\caches\transforms-3\e5c4baf36e93376ab3bd7320875c990b\transformed\work-runtime-2.9.0\AndroidManifest.xml:140:25-85
+217            </intent-filter>
+218        </receiver>
+219
+220        <activity
+220-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+221            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+221-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+222            android:excludeFromRecents="true"
+222-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+223            android:exported="false"
+223-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+224            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+224-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+225        <!--
+226            Service handling Google Sign-In user revocation. For apps that do not integrate with
+227            Google Sign-In, this service will never be started.
+228        -->
+229        <service
+229-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+230            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+230-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+231            android:exported="true"
+231-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+232            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+232-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+233            android:visibleToInstantApps="true" />
+233-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\ef258b270a038665d14f46b082132290\transformed\play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+234        <service
+234-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0e574369468ab3aa8c2034256e5f8a1f\transformed\firebase-auth-ktx-22.3.0\AndroidManifest.xml:8:9-14:19
+235            android:name="com.google.firebase.components.ComponentDiscoveryService"
+235-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0e574369468ab3aa8c2034256e5f8a1f\transformed\firebase-auth-ktx-22.3.0\AndroidManifest.xml:9:13-84
+236            android:directBootAware="true"
+236-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+237            android:exported="false" >
+237-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0e574369468ab3aa8c2034256e5f8a1f\transformed\firebase-auth-ktx-22.3.0\AndroidManifest.xml:10:13-37
+238            <meta-data
+238-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0e574369468ab3aa8c2034256e5f8a1f\transformed\firebase-auth-ktx-22.3.0\AndroidManifest.xml:11:13-13:85
+239                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+239-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0e574369468ab3aa8c2034256e5f8a1f\transformed\firebase-auth-ktx-22.3.0\AndroidManifest.xml:12:17-119
+240                android:value="com.google.firebase.components.ComponentRegistrar" />
+240-->[com.google.firebase:firebase-auth-ktx:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\0e574369468ab3aa8c2034256e5f8a1f\transformed\firebase-auth-ktx-22.3.0\AndroidManifest.xml:13:17-82
+241            <meta-data
+241-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:69:13-71:85
+242                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+242-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:70:17-109
+243                android:value="com.google.firebase.components.ComponentRegistrar" />
+243-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:71:17-82
+244            <meta-data
+244-->[com.google.firebase:firebase-storage-ktx:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\76177e48562264c48820b22b0e8671b0\transformed\firebase-storage-ktx-20.3.0\AndroidManifest.xml:12:13-14:85
+245                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar"
+245-->[com.google.firebase:firebase-storage-ktx:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\76177e48562264c48820b22b0e8671b0\transformed\firebase-storage-ktx-20.3.0\AndroidManifest.xml:13:17-125
+246                android:value="com.google.firebase.components.ComponentRegistrar" />
+246-->[com.google.firebase:firebase-storage-ktx:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\76177e48562264c48820b22b0e8671b0\transformed\firebase-storage-ktx-20.3.0\AndroidManifest.xml:14:17-82
+247            <meta-data
+247-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\d0fd3d78c17d70774d43dbaec5677eeb\transformed\firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
+248                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+248-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\d0fd3d78c17d70774d43dbaec5677eeb\transformed\firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
+249                android:value="com.google.firebase.components.ComponentRegistrar" />
+249-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\d0fd3d78c17d70774d43dbaec5677eeb\transformed\firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
+250            <meta-data
+250-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\d0fd3d78c17d70774d43dbaec5677eeb\transformed\firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
+251                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+251-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\d0fd3d78c17d70774d43dbaec5677eeb\transformed\firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
+252                android:value="com.google.firebase.components.ComponentRegistrar" />
+252-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\d0fd3d78c17d70774d43dbaec5677eeb\transformed\firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
+253            <meta-data
+253-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Lenovo\.gradle\caches\transforms-3\e60f0777e0b5c67b2ba8477526cf6eea\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:25:13-27:85
+254                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+254-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Lenovo\.gradle\caches\transforms-3\e60f0777e0b5c67b2ba8477526cf6eea\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:26:17-120
+255                android:value="com.google.firebase.components.ComponentRegistrar" />
+255-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Lenovo\.gradle\caches\transforms-3\e60f0777e0b5c67b2ba8477526cf6eea\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:27:17-82
+256            <meta-data
+256-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Lenovo\.gradle\caches\transforms-3\e60f0777e0b5c67b2ba8477526cf6eea\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:28:13-30:85
+257                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+257-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Lenovo\.gradle\caches\transforms-3\e60f0777e0b5c67b2ba8477526cf6eea\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:29:17-117
+258                android:value="com.google.firebase.components.ComponentRegistrar" />
+258-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Lenovo\.gradle\caches\transforms-3\e60f0777e0b5c67b2ba8477526cf6eea\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:30:17-82
+259            <meta-data
+259-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\de0b7590a8136e5e0a3ad395708fb841\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+260                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+260-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\de0b7590a8136e5e0a3ad395708fb841\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+261                android:value="com.google.firebase.components.ComponentRegistrar" />
+261-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\de0b7590a8136e5e0a3ad395708fb841\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+262            <meta-data
+262-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+263                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+263-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+264                android:value="com.google.firebase.components.ComponentRegistrar" />
+264-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+265        </service>
+266
+267        <activity
+267-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:29:9-46:20
+268            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+268-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:30:13-80
+269            android:excludeFromRecents="true"
+269-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:31:13-46
+270            android:exported="true"
+270-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:32:13-36
+271            android:launchMode="singleTask"
+271-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:33:13-44
+272            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+272-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:34:13-72
+273            <intent-filter>
+273-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:35:13-45:29
+274                <action android:name="android.intent.action.VIEW" />
+274-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:36:17-69
+274-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:36:25-66
+275
+276                <category android:name="android.intent.category.DEFAULT" />
+276-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:38:17-76
+276-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:38:27-73
+277                <category android:name="android.intent.category.BROWSABLE" />
+277-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:39:17-78
+277-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:39:27-75
+278
+279                <data
+279-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:76:17-50
+280                    android:host="firebase.auth"
+281                    android:path="/"
+282                    android:scheme="genericidp" />
+282-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:76:23-47
+283            </intent-filter>
+284        </activity>
+285        <activity
+285-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:47:9-64:20
+286            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+286-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:48:13-79
+287            android:excludeFromRecents="true"
+287-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:49:13-46
+288            android:exported="true"
+288-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:50:13-36
+289            android:launchMode="singleTask"
+289-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:51:13-44
+290            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+290-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:52:13-72
+291            <intent-filter>
+291-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:53:13-63:29
+292                <action android:name="android.intent.action.VIEW" />
+292-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:36:17-69
+292-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:36:25-66
+293
+294                <category android:name="android.intent.category.DEFAULT" />
+294-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:38:17-76
+294-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:38:27-73
+295                <category android:name="android.intent.category.BROWSABLE" />
+295-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:39:17-78
+295-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\bb9b017978e3afcf7f018e2209ebf522\transformed\firebase-auth-22.3.0\AndroidManifest.xml:39:27-75
+296
+297                <data
+297-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:76:17-50
+298                    android:host="firebase.auth"
+299                    android:path="/"
+300                    android:scheme="recaptcha" />
+300-->C:\Users\Lenovo\Documents\app\SmartCleaner\app\src\main\AndroidManifest.xml:76:23-47
+301            </intent-filter>
+302        </activity>
+303        <activity
+303-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Lenovo\.gradle\caches\transforms-3\be379acd1305e7ade29e439a59a7cf0d\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+304            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+304-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Lenovo\.gradle\caches\transforms-3\be379acd1305e7ade29e439a59a7cf0d\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+305            android:exported="false"
+305-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Lenovo\.gradle\caches\transforms-3\be379acd1305e7ade29e439a59a7cf0d\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+306            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+306-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Lenovo\.gradle\caches\transforms-3\be379acd1305e7ade29e439a59a7cf0d\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+307
+308        <provider
+308-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+309            android:name="com.google.firebase.provider.FirebaseInitProvider"
+309-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+310            android:authorities="com.smartcleaner.firebaseinitprovider"
+310-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+311            android:directBootAware="true"
+311-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+312            android:exported="false"
+312-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+313            android:initOrder="100" />
+313-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\.gradle\caches\transforms-3\84d36e2ffe614100cfc6a6f359dd092d\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+314
+315        <activity
+315-->[androidx.compose.ui:ui-tooling-android:1.5.4] C:\Users\Lenovo\.gradle\caches\transforms-3\210b431f79d512fcfb50ee5e35c1f681\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+316            android:name="androidx.compose.ui.tooling.PreviewActivity"
+316-->[androidx.compose.ui:ui-tooling-android:1.5.4] C:\Users\Lenovo\.gradle\caches\transforms-3\210b431f79d512fcfb50ee5e35c1f681\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+317            android:exported="true" />
+317-->[androidx.compose.ui:ui-tooling-android:1.5.4] C:\Users\Lenovo\.gradle\caches\transforms-3\210b431f79d512fcfb50ee5e35c1f681\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+318        <activity
+318-->[androidx.compose.ui:ui-test-manifest:1.5.4] C:\Users\Lenovo\.gradle\caches\transforms-3\cf93bc5eb948228c722f9f62465b882b\transformed\ui-test-manifest-1.5.4\AndroidManifest.xml:23:9-25:39
+319            android:name="androidx.activity.ComponentActivity"
+319-->[androidx.compose.ui:ui-test-manifest:1.5.4] C:\Users\Lenovo\.gradle\caches\transforms-3\cf93bc5eb948228c722f9f62465b882b\transformed\ui-test-manifest-1.5.4\AndroidManifest.xml:24:13-63
+320            android:exported="true" />
+320-->[androidx.compose.ui:ui-test-manifest:1.5.4] C:\Users\Lenovo\.gradle\caches\transforms-3\cf93bc5eb948228c722f9f62465b882b\transformed\ui-test-manifest-1.5.4\AndroidManifest.xml:25:13-36
+321
+322        <service
+322-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14bf1d2aefcd8f66d8b6d9b106820625\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+323            android:name="androidx.room.MultiInstanceInvalidationService"
+323-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14bf1d2aefcd8f66d8b6d9b106820625\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+324            android:directBootAware="true"
+324-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14bf1d2aefcd8f66d8b6d9b106820625\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+325            android:exported="false" />
+325-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14bf1d2aefcd8f66d8b6d9b106820625\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+326
+327        <meta-data
+327-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1fa979ffa61f2ae68a022f4df14e59bf\transformed\play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
+328            android:name="com.google.android.gms.version"
+328-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1fa979ffa61f2ae68a022f4df14e59bf\transformed\play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+329            android:value="@integer/google_play_services_version" />
+329-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1fa979ffa61f2ae68a022f4df14e59bf\transformed\play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
+330
+331        <receiver
+331-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+332            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+332-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+333            android:directBootAware="false"
+333-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+334            android:enabled="true"
+334-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+335            android:exported="true"
+335-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+336            android:permission="android.permission.DUMP" >
+336-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+337            <intent-filter>
+337-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+338                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+338-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+338-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+339            </intent-filter>
+340            <intent-filter>
+340-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+341                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+341-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+341-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+342            </intent-filter>
+343            <intent-filter>
+343-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+344                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+344-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+344-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+345            </intent-filter>
+346            <intent-filter>
+346-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+347                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+347-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+347-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\cd295d0256d951bb268396532909ae01\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+348            </intent-filter>
+349        </receiver>
+350    </application>
+351
+352</manifest>
